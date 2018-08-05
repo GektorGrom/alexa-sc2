@@ -1,5 +1,5 @@
 {
-  "name": "alexaSC2",
+  "name": "alexasc2",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -17,33 +17,32 @@
     "logs": "serverless logs -t --startTime 2h -f"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.54",
-    "@babel/plugin-proposal-optional-chaining": "^7.0.0-beta.53",
-    "@babel/plugin-transform-runtime": "^7.0.0-beta.53",
-    "@babel/preset-env": "^7.0.0-beta.53",
+    "@babel/core": "^7.0.0-beta.56",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0-beta.56",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.56",
+    "@babel/preset-env": "^7.0.0-beta.56",
     "babel-core": "^7.0.0-beta.53",
     "babel-eslint": "^8.2.6",
-    "babel-jest": "^23.4.0",
+    "babel-jest": "^23.4.2",
     "babel-loader": "^8.0.0-beta",
     "dotenv-webpack": "^1.5.7",
-    "eslint": "^5.2.0",
+    "eslint": "^5.3.0",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jest": "^21.18.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "jest": "^23.4.1",
-    "regenerator-runtime": "^0.12.0",
-    "serverless": "^1.25.0",
+    "jest": "^23.4.2",
+    "prettier": "^1.14.0",
+    "regenerator-runtime": "^0.12.1",
+    "serverless": "^1.29.2",
     "serverless-plugin-webpack": "^1.3.0",
     "uglifyjs-webpack-plugin": "^1.1.6",
     "webpack": "^3.10.0"
   },
   "dependencies": {
-    "alexa-sdk": "^1.0.25",
-    "ask-sdk-core": "^2.0.7",
-    "aws-sdk": "^2.279.1",
-    "dynamoose": "^0.8.7",
-    "pretty-ms": "^3.1.0",
+    "ask-sdk": "^2.0.7",
+    "aws-sdk": "^2.286.2",
+    "date-fns": "^2.0.0-alpha.16",
     "ssml-builder": "^0.4.2"
   }
 }

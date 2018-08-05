@@ -9,19 +9,26 @@ AWS.config.update({
 });
 const client = new AWS.DynamoDB();
 
-const getDynamoItem = async (table = 'SC2_Units', id) => {
-  const gameList = await client.getItem({
-    TableName: table,
-    Key: {
-      name_id: {
-        S: id,
+const getDynamoItem = async (
+  table = 'SC2_Units',
+  id,
+  projection = 'description',
+) => {
+  const unit = await client
+    .getItem({
+      TableName: table,
+      Key: {
+        name_id: {
+          S: id,
+        },
       },
-    },
-    ProjectionExpression: 'description',
-  }).promise().catch((e) => {
-    console.log(e.message);
-  });
-  return parse(gameList.Item);
+      ProjectionExpression: projection,
+    })
+    .promise()
+    .catch((e) => {
+      console.log(e.message);
+    });
+  return parse(unit.Item);
 };
 
 export default getDynamoItem;

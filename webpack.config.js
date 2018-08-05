@@ -8,7 +8,7 @@ module.exports = {
   target: 'node',
   externals: [
     /aws-sdk/, // Available on AWS Lambda
-    // /alexa-sdk/, // Available on AWS Lambda
+    // /ask-sdk-core/, // Available on AWS Lambda
   ],
   plugins: [
     new Dotenv(),
@@ -16,7 +16,7 @@ module.exports = {
       uglifyOptions: {
         ecma: 7,
       },
-      extractComments: false,
+      extractComments: true,
     }),
   ],
   // resolve: {

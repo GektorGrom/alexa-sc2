@@ -1,23 +1,16 @@
-import getDynamoItem from '../../libs/AWS/getDynamoItem';
+import * as Alexa from 'ask-sdk';
+import ErrorHandler from '../../Intents/error_intent';
+import LaunchRequestHandler from '../../Intents/launch_request';
+import CancelAndStopIntentHandler from '../../Intents/stop_intent';
+import UnitDescriptionIntentHandler from '../../Intents/unit_description';
+import UnitWeaknessIntentHandler from '../../Intents/weakness_intent';
 
-module.exports.description = async (event, context, callback) => {
-  console.log(JSON.stringify(event.request));
-  const response = {
-    version: '1.0',
-    response: {
-      outputSpeech: {
-        type: 'PlainText',
-      },
-      shouldEndSession: true,
-    },
-  };
-  if (event.request.intent?.slots.Units.resolutions?.resolutionsPerAuthority[0].status.code === 'ER_SUCCESS_NO_MATCH') {
-    response.response.outputSpeech.text = 'Ouugh';
-    response.response.shouldEndSession = false;
-  } else {
-    const { description } = await getDynamoItem('SC2_Units', event.request.intent?.slots.Units.resolutions?.resolutionsPerAuthority[0].values[0].value.id);
-    response.response.outputSpeech.text = `Here's brief description of ${description}`;
-  }
-
-  callback(null, response);
-};
+exports.description = Alexa.SkillBuilders.custom()
+  .addRequestHandlers(
+    LaunchRequestHandler,
+    UnitDescriptionIntentHandler,
+    CancelAndStopIntentHandler,
+    UnitWeaknessIntentHandler,
+  )
+  .addErrorHandlers(ErrorHandler)
+  .lambda();
