@@ -1,9 +1,11 @@
 import * as Alexa from 'ask-sdk';
 import UnitCargoIntentHandler from '../../Intents/cargo_intent';
-import ErrorHandler from '../../Intents/error_intent';
-import LaunchRequestHandler from '../../Intents/launch_request';
+import HelpIntentHandler from '../../Intents/Default/helper_intent';
+import ErrorHandler from '../../Intents/Default/error_intent';
+import LaunchRequestHandler from '../../Intents/Default/launch_request';
+import SessionEndedRequestHandler from '../../Intents/Default/sessionEnd_intetnt';
 import UnitSpeedIntentHandler from '../../Intents/speed_intent';
-import CancelAndStopIntentHandler from '../../Intents/stop_intent';
+import CancelAndStopIntentHandler from '../../Intents/Default/stop_intent';
 import UnitStrengthIntentHandler from '../../Intents/strenght_intent';
 import UnitDescriptionIntentHandler from '../../Intents/unit_description';
 import UnitWeaknessIntentHandler from '../../Intents/weakness_intent';
@@ -16,7 +18,9 @@ exports.description = Alexa.SkillBuilders.custom()
     UnitStrengthIntentHandler,
     UnitCargoIntentHandler,
     UnitSpeedIntentHandler,
+    HelpIntentHandler,
     CancelAndStopIntentHandler,
+    SessionEndedRequestHandler,
   )
   .addErrorHandlers(ErrorHandler)
   .lambda();

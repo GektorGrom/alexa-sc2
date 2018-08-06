@@ -1,0 +1,49 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.3df3a1aa-49ac-44f9-bff6-f744a196a132",
+      "was_cloned": true,
+      "resources": {
+        "manifest": {
+          "eTag": "6201143dc98096dce6de5e66c9abb5ec"
+        },
+        "interactionModel": {
+          "en-US": {
+            "eTag": "515e4c60f959ae806825c88dac6a8695"
+          },
+          "en-CA": {
+            "eTag": "c883a6b9d7cc4df2fe5d7fece7a55bab"
+          },
+          "en-AU": {
+            "eTag": "c883a6b9d7cc4df2fe5d7fece7a55bab"
+          },
+          "en-GB": {
+            "eTag": "c883a6b9d7cc4df2fe5d7fece7a55bab"
+          }
+        },
+        "lambda": [
+          {
+            "arn": "arn:aws:lambda:us-west-2:082604792641:function:alexaSC2-dev-sc2",
+            "awsRegion": "us-west-2",
+            "functionName": "alexaSC2-dev-sc2",
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "revisionId": "3d6cac01-898d-40dd-b850-2ecd96eefb56"
+          }
+        ]
+      },
+      "merge": {
+        "manifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "arn:aws:lambda:us-west-2:082604792641:function:alexaSC2-dev-sc2"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

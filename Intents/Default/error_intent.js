@@ -1,9 +1,11 @@
+import Logger from '../../libs/Logger/index';
+
 const ErrorHandler = {
   canHandle() {
     return true;
   },
   handle(handlerInput, error) {
-    console.log(`Error handled: ${error.message}`);
+    Logger.error(error);
 
     return handlerInput.responseBuilder
       .speak('Sorry, Starcraft 2 skill can\'t understand the command. Please say again.')

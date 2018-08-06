@@ -1,0 +1,682 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "starcraft",
+      "intents": [
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "unit_description",
+          "slots": [
+            {
+              "name": "Unit",
+              "type": "Units"
+            }
+          ],
+          "samples": [
+            "tell me about {Unit}",
+            "describe {Unit}",
+            "get description for {Unit}",
+            "get {Unit} description"
+          ]
+        },
+        {
+          "name": "weakness",
+          "slots": [
+            {
+              "name": "Unit",
+              "type": "Units"
+            }
+          ],
+          "samples": [
+            "list of weaknesses for {Unit}",
+            "{Unit} weak to",
+            "get {Unit} weaknesses",
+            "get {Unit} weakness"
+          ]
+        },
+        {
+          "name": "unit_strength",
+          "slots": [
+            {
+              "name": "Unit",
+              "type": "Units"
+            }
+          ],
+          "samples": [
+            "get {Unit} strengths",
+            "{Unit} strengths",
+            "{Unit} strength"
+          ]
+        },
+        {
+          "name": "unit_cargo",
+          "slots": [
+            {
+              "name": "Unit",
+              "type": "Units"
+            }
+          ],
+          "samples": [
+            "{Unit} supply",
+            "{Unit} cargo"
+          ]
+        },
+        {
+          "name": "unit_speed",
+          "slots": [
+            {
+              "name": "Unit",
+              "type": "Units"
+            }
+          ],
+          "samples": [
+            "check {Unit} speed",
+            "what is speed for {Unit}",
+            "{Unit} speed"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "Adept",
+              "name": {
+                "value": "Adept",
+                "synonyms": [
+                  "Adept"
+                ]
+              }
+            },
+            {
+              "id": "Archon_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Archon_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Archon"
+                ]
+              }
+            },
+            {
+              "id": "Auto-Turret_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Auto-Turret_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Auto-Turret"
+                ]
+              }
+            },
+            {
+              "id": "Baneling_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Baneling_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Baneling"
+                ]
+              }
+            },
+            {
+              "id": "Banshee_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Banshee_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Banshee"
+                ]
+              }
+            },
+            {
+              "id": "Battlecruiser_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Battlecruiser_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Battlecruiser"
+                ]
+              }
+            },
+            {
+              "id": "Brood_Lord_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Brood_Lord_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Brood Lord"
+                ]
+              }
+            },
+            {
+              "id": "Broodling_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Broodling_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Broodling"
+                ]
+              }
+            },
+            {
+              "id": "Carrier_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Carrier_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Carrier"
+                ]
+              }
+            },
+            {
+              "id": "Changeling_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Changeling_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Changeling"
+                ]
+              }
+            },
+            {
+              "id": "Cocoon",
+              "name": {
+                "value": "Cocoon",
+                "synonyms": [
+                  "Cocoon"
+                ]
+              }
+            },
+            {
+              "id": "Colossus_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Colossus_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Colossus"
+                ]
+              }
+            },
+            {
+              "id": "Corruptor_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Corruptor_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Corruptor"
+                ]
+              }
+            },
+            {
+              "id": "Cyclone",
+              "name": {
+                "value": "Cyclone",
+                "synonyms": [
+                  "Cyclone"
+                ]
+              }
+            },
+            {
+              "id": "Dark_Templar_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Dark_Templar_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Dark Templar"
+                ]
+              }
+            },
+            {
+              "id": "Disruptor",
+              "name": {
+                "value": "Disruptor",
+                "synonyms": [
+                  "Disruptor"
+                ]
+              }
+            },
+            {
+              "id": "Drone_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Drone_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Drone"
+                ]
+              }
+            },
+            {
+              "id": "Ghost_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Ghost_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Ghost"
+                ]
+              }
+            },
+            {
+              "id": "Hellbat_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Hellbat_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Hellbat"
+                ]
+              }
+            },
+            {
+              "id": "Hellion_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Hellion_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Hellion"
+                ]
+              }
+            },
+            {
+              "id": "High_Templar_(Legacy_of_the_Void)",
+              "name": {
+                "value": "High_Templar_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "High Templar"
+                ]
+              }
+            },
+            {
+              "id": "Hydralisk_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Hydralisk_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Hydralisk"
+                ]
+              }
+            },
+            {
+              "id": "Immortal_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Immortal_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Immortal"
+                ]
+              }
+            },
+            {
+              "id": "Infested_Terran_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Infested_Terran_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Infested Terran"
+                ]
+              }
+            },
+            {
+              "id": "Infestor_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Infestor_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Infestor"
+                ]
+              }
+            },
+            {
+              "id": "Larva_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Larva_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Larva"
+                ]
+              }
+            },
+            {
+              "id": "Liberator",
+              "name": {
+                "value": "Liberator",
+                "synonyms": [
+                  "Liberator"
+                ]
+              }
+            },
+            {
+              "id": "Locust_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Locust_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Locust"
+                ]
+              }
+            },
+            {
+              "id": "Lurker_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Lurker_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Lurker"
+                ]
+              }
+            },
+            {
+              "id": "MULE_(Legacy_of_the_Void)",
+              "name": {
+                "value": "MULE_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "MULE"
+                ]
+              }
+            },
+            {
+              "id": "Marauder_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Marauder_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Marauder"
+                ]
+              }
+            },
+            {
+              "id": "Marine_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Marine_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Marine"
+                ]
+              }
+            },
+            {
+              "id": "Medivac_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Medivac_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Medivac"
+                ]
+              }
+            },
+            {
+              "id": "Mothership_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Mothership_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Mothership"
+                ]
+              }
+            },
+            {
+              "id": "Mothership_Core_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Mothership_Core_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Mothership Core"
+                ]
+              }
+            },
+            {
+              "id": "Mutalisk_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Mutalisk_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Mutalisk"
+                ]
+              }
+            },
+            {
+              "id": "Nydus_Worm_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Nydus_Worm_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Nydus Worm"
+                ]
+              }
+            },
+            {
+              "id": "Observer_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Observer_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Observer"
+                ]
+              }
+            },
+            {
+              "id": "Oracle_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Oracle_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Oracle"
+                ]
+              }
+            },
+            {
+              "id": "Overlord_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Overlord_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Overlord"
+                ]
+              }
+            },
+            {
+              "id": "Overseer_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Overseer_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Overseer"
+                ]
+              }
+            },
+            {
+              "id": "Phoenix_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Phoenix_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Phoenix"
+                ]
+              }
+            },
+            {
+              "id": "Point_Defense_Drone_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Point_Defense_Drone_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Point Defense Drone"
+                ]
+              }
+            },
+            {
+              "id": "Probe_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Probe_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Probe"
+                ]
+              }
+            },
+            {
+              "id": "Queen_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Queen_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Queen"
+                ]
+              }
+            },
+            {
+              "id": "Ravager",
+              "name": {
+                "value": "Ravager",
+                "synonyms": [
+                  "Ravager"
+                ]
+              }
+            },
+            {
+              "id": "Raven_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Raven_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Raven"
+                ]
+              }
+            },
+            {
+              "id": "Reaper_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Reaper_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Reaper"
+                ]
+              }
+            },
+            {
+              "id": "Roach_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Roach_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Roach"
+                ]
+              }
+            },
+            {
+              "id": "SCV_(Legacy_of_the_Void)",
+              "name": {
+                "value": "SCV_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "SCV"
+                ]
+              }
+            },
+            {
+              "id": "Sentry_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Sentry_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Sentry"
+                ]
+              }
+            },
+            {
+              "id": "Siege_Tank_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Siege_Tank_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "tank",
+                  "Siege Tank"
+                ]
+              }
+            },
+            {
+              "id": "Stalker_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Stalker_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Stalker"
+                ]
+              }
+            },
+            {
+              "id": "Swarm_Host_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Swarm_Host_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Swarm Host"
+                ]
+              }
+            },
+            {
+              "id": "Tempest_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Tempest_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Tempest"
+                ]
+              }
+            },
+            {
+              "id": "Thor_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Thor_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Thor"
+                ]
+              }
+            },
+            {
+              "id": "Ultralisk_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Ultralisk_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Ultralisk"
+                ]
+              }
+            },
+            {
+              "id": "Viking_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Viking_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Viking"
+                ]
+              }
+            },
+            {
+              "id": "Viper_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Viper_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Viper"
+                ]
+              }
+            },
+            {
+              "id": "Void_Ray_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Void_Ray_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Void Ray"
+                ]
+              }
+            },
+            {
+              "id": "Warp_Prism_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Warp_Prism_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Warp Prism"
+                ]
+              }
+            },
+            {
+              "id": "Widow_Mine_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Widow_Mine_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "Widow Mine"
+                ]
+              }
+            },
+            {
+              "id": "Zealot_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Zealot_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "zealand",
+                  "Zealot"
+                ]
+              }
+            },
+            {
+              "id": "Zergling_(Legacy_of_the_Void)",
+              "name": {
+                "value": "Zergling_(Legacy_of_the_Void)",
+                "synonyms": [
+                  "zerling",
+                  "Zergling"
+                ]
+              }
+            }
+          ],
+          "name": "Units"
+        }
+      ]
+    }
+  }
+}

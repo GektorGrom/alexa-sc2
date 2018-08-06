@@ -1,0 +1,120 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "StarCraft 2 companion helps you to know game better",
+          "examplePhrases": [
+            "Alexa ask Starcraft get ghost description",
+            "Alexa ask Starcraft stalker speed",
+            "Alexa ask Starcraft get Mutalisk weaknesses"
+          ],
+          "keywords": [
+            "SC2",
+            "Starcraft",
+            "2",
+            "SC",
+            "2",
+            "Zerg",
+            "Protoss",
+            "Terran",
+            "Starcraft"
+          ],
+          "name": "StarCraft 2 companion",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/2035/39041e0474d544ecb107719c60b77be6/APP_ICON?versionId=qXVcDe6zXsOh7PflB5EClhPaJ97xRhxj&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1533662502&Signature=nzC8DmgZQ87pCrWvZOQmNxOE83E%3D",
+          "description": "StarCraft 2 companion will get you brief unit description, unit strengths and weaknesses as well as many other useful information.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/4453/510f83bcb9414945b2ce1891441577ce/APP_ICON_LARGE?versionId=AlRRNEmoGqlxnEzm6v7eCJO1.7ESa7kR&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1533662502&Signature=QrvrFIywPtp9HZN8U7A2GaOv4A0%3D"
+        },
+        "en-CA": {
+          "summary": "StarCraft 2 companion helps you to know game better",
+          "examplePhrases": [
+            "Alexa ask Starcraft get ghost description",
+            "Alexa ask Starcraft stalker speed",
+            "Alexa ask Starcraft get Mutalisk weaknesses"
+          ],
+          "keywords": [
+            "SC2",
+            "Starcraft",
+            "2",
+            "SC",
+            "2",
+            "Zerg",
+            "Protoss",
+            "Terran",
+            "Starcraft"
+          ],
+          "name": "StarCraft 2 companion",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/43d3/7559f21635a04402a2b3051de4ecb6f0/APP_ICON?versionId=zk8VYyVpB4un6na2leDVhobzFG0CVKu0&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1533662502&Signature=2fyapLvgs%2FmrxY6DXos4clYcU40%3D",
+          "description": "StarCraft 2 companion will get you brief unit description, unit strengths and weaknesses as well as many other useful information.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/a00e/289556c8bcd647a289ea128c5cba2802/APP_ICON_LARGE?versionId=agvmTVw5HKBRvvnGSDbyANjcuTrV2bWz&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1533662502&Signature=C%2FI2A6fFSTjfJQOSwFG857C0NQ8%3D"
+        },
+        "en-AU": {
+          "summary": "StarCraft 2 companion helps you to know game better",
+          "examplePhrases": [
+            "Alexa ask Starcraft get ghost description",
+            "Alexa ask Starcraft stalker speed",
+            "Alexa ask Starcraft get Mutalisk weaknesses"
+          ],
+          "keywords": [
+            "SC2",
+            "Starcraft",
+            "2",
+            "SC",
+            "2",
+            "Zerg",
+            "Protoss",
+            "Terran",
+            "Starcraft"
+          ],
+          "name": "StarCraft 2 companion",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/3b51/e3c835a2c57f47c7b4bd00d824195226/APP_ICON?versionId=gOqtx5MywmIcz2PrFDjgTIX8HnQOiJNG&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1533662502&Signature=aCAuWIUWjK116zYwlymzWzfDIGg%3D",
+          "description": "StarCraft 2 companion will get you brief unit description, unit strengths and weaknesses as well as many other useful information.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/530e/a4a6818220be4afdabf1ef257cdfe798/APP_ICON_LARGE?versionId=VlmvFScjk8HMMAzOlfWkml6K_t62bhvd&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1533662502&Signature=z5XGS0u1XaOhy4zRFDFPvAkzaf0%3D"
+        },
+        "en-GB": {
+          "summary": "StarCraft 2 companion helps you to know game better",
+          "examplePhrases": [
+            "Alexa ask Starcraft get ghost description",
+            "Alexa ask Starcraft stalker speed",
+            "Alexa ask Starcraft get Mutalisk weaknesses"
+          ],
+          "keywords": [
+            "SC2",
+            "Starcraft",
+            "2",
+            "SC",
+            "2",
+            "Zerg",
+            "Protoss",
+            "Terran",
+            "Starcraft"
+          ],
+          "name": "StarCraft 2 companion",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c396/14db5e52f7854bb48a5eeb7a08a97ad4/APP_ICON?versionId=0342U8CwMkwVxoRf1LrcchDe78s5rH48&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1533662502&Signature=Ijkgd%2BdjCpUlbB3WPUmfm%2BCSYeA%3D",
+          "description": "StarCraft 2 companion will get you brief unit description, unit strengths and weaknesses as well as many other useful information.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/309d/d60324bc5e2849bd908119e7b6494e72/APP_ICON_LARGE?versionId=MLUDYtgHQh1bW0gj7bZnp8KEYcJxNZcM&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1533662502&Signature=LK8ShYJC6p%2BwMFAfdh%2BmbnFLTYM%3D"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Ask about unit description. Or unit weaknesses. Example of units is ghost or liberator. Example of question is: `get ghost description`, `stalker speed`.",
+      "category": "EDUCATION_AND_REFERENCE",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "./lambda/us-west-2_alexaSC2-dev-sc2"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}
