@@ -4,16 +4,16 @@ import unitsFromArray from '../libs/Ask/unitsFromArray';
 /* eslint-disable camelcase */
 import getDynamoItem from '../libs/AWS/getDynamoItem';
 
-const UnitWeaknessIntentHandler = {
+const UnitStrengthIntentHandler = {
   canHandle(handlerInput) {
     return (
       handlerInput.requestEnvelope.request.type === 'IntentRequest'
-      && handlerInput.requestEnvelope.request.intent.name === 'weakness'
+      && handlerInput.requestEnvelope.request.intent.name === 'unit_strength'
     );
   },
   async handle(handlerInput) {
     console.log(
-      'UnitDescriptionIntentHandler',
+      'UnitStrengthIntentHandler',
       JSON.stringify(handlerInput.requestEnvelope),
     );
     const {
@@ -27,17 +27,17 @@ const UnitWeaknessIntentHandler = {
       return specifyUnit(handlerInput);
     }
     const unit = resolutions.resolutionsPerAuthority[0].values?.[0].value.id;
-    const { Weak_against } = await getDynamoItem(
+    const { Strong_against } = await getDynamoItem(
       'SC2_Units',
       unit,
-      'Weak_against',
+      'Strong_against',
     );
     // value is unit name spelled by alexa user
-    const speechText = Weak_against
-      ? `${value} weak to ${unitsFromArray(Weak_against.values)}`
+    const speechText = Strong_against
+      ? `${value} strong to ${unitsFromArray(Strong_against.values)}`
       : `${value} does not have any weaknesses`;
     return handlerInput.responseBuilder.speak(speechText).getResponse();
   },
 };
 
-export default UnitWeaknessIntentHandler;
+export default UnitStrengthIntentHandler;

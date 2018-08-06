@@ -1,19 +1,18 @@
 import specifyUnit from '../libs/Ask/specifyUnit';
-import unitsFromArray from '../libs/Ask/unitsFromArray';
 
 /* eslint-disable camelcase */
 import getDynamoItem from '../libs/AWS/getDynamoItem';
 
-const UnitWeaknessIntentHandler = {
+const UnitCargoIntentHandler = {
   canHandle(handlerInput) {
     return (
       handlerInput.requestEnvelope.request.type === 'IntentRequest'
-      && handlerInput.requestEnvelope.request.intent.name === 'weakness'
+      && handlerInput.requestEnvelope.request.intent.name === 'unit_cargo'
     );
   },
   async handle(handlerInput) {
     console.log(
-      'UnitDescriptionIntentHandler',
+      'UnitCargoIntentHandler',
       JSON.stringify(handlerInput.requestEnvelope),
     );
     const {
@@ -27,17 +26,17 @@ const UnitWeaknessIntentHandler = {
       return specifyUnit(handlerInput);
     }
     const unit = resolutions.resolutionsPerAuthority[0].values?.[0].value.id;
-    const { Weak_against } = await getDynamoItem(
+    const { Cargo_Size } = await getDynamoItem(
       'SC2_Units',
       unit,
-      'Weak_against',
+      'Cargo_Size',
     );
     // value is unit name spelled by alexa user
-    const speechText = Weak_against
-      ? `${value} weak to ${unitsFromArray(Weak_against.values)}`
-      : `${value} does not have any weaknesses`;
+    const speechText = Cargo_Size
+      ? `Cargo size for ${value} is ${Cargo_Size}`
+      : `${value} does not affect cargo size`;
     return handlerInput.responseBuilder.speak(speechText).getResponse();
   },
 };
 
-export default UnitWeaknessIntentHandler;
+export default UnitCargoIntentHandler;

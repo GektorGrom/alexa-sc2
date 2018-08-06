@@ -5,7 +5,7 @@ const CancelAndStopIntentHandler = {
         || handlerInput.requestEnvelope.request.intent.name === 'AMAZON.StopIntent');
   },
   handle(handlerInput) {
-    const speechText = 'Goodbye!';
+    const speechText = 'See you next time!';
 
     return handlerInput.responseBuilder
       .speak(speechText)

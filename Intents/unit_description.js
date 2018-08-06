@@ -1,3 +1,4 @@
+import specifyUnit from '../libs/Ask/specifyUnit';
 import getDynamoItem from '../libs/AWS/getDynamoItem';
 
 const UnitDescriptionIntentHandler = {
@@ -8,15 +9,18 @@ const UnitDescriptionIntentHandler = {
     );
   },
   async handle(handlerInput) {
-    const { resolutions } = handlerInput.requestEnvelope.request.intent.slots.Units;
+    console.log(
+      'UnitDescriptionIntentHandler',
+      JSON.stringify(handlerInput.requestEnvelope),
+    );
+    const {
+      resolutions,
+    } = handlerInput.requestEnvelope.request.intent.slots.Unit;
     if (
-      resolutions.resolutionsPerAuthority[0].status.code === 'ER_SUCCESS_NO_MATCH'
+      resolutions.resolutionsPerAuthority[0].status.code
+      === 'ER_SUCCESS_NO_MATCH'
     ) {
-      return handlerInput.responseBuilder
-        .speak('Could you specify unit')
-        .reprompt('Could you specify unit')
-        .addConfirmSlotDirective('Units', handlerInput.requestEnvelope.request.intent)
-        .getResponse();
+      return specifyUnit(handlerInput);
     }
     const unit = resolutions.resolutionsPerAuthority[0].values?.[0].value.id;
     const { description } = await getDynamoItem('SC2_Units', unit);
