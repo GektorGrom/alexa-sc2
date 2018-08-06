@@ -677,6 +677,137 @@
           ]
         }
       ]
-    }
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "unit_description",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Unit",
+              "type": "Units",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.170661145158.259766048944"
+              }
+            }
+          ]
+        },
+        {
+          "name": "weakness",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Unit",
+              "type": "Units",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1335528478351.138904118468"
+              }
+            }
+          ]
+        },
+        {
+          "name": "unit_strength",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Unit",
+              "type": "Units",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.488601999843.298002868887"
+              }
+            }
+          ]
+        },
+        {
+          "name": "unit_cargo",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Unit",
+              "type": "Units",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.877084724223.1087624319795"
+              }
+            }
+          ]
+        },
+        {
+          "name": "unit_speed",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Unit",
+              "type": "Units",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.544668873171.871836453294"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.170661145158.259766048944",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Could you specify a unit?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1335528478351.138904118468",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Could you specify a unit?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.488601999843.298002868887",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Could you specify a unit?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.877084724223.1087624319795",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Could you specify a unit?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.544668873171.871836453294",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Could you specify a unit?"
+          }
+        ]
+      }
+    ]
   }
 }
