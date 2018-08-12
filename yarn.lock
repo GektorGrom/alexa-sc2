@@ -5995,7 +5995,7 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 
-ssml-builder@^0.4.2:
+ssml-builder@^0.4.3:
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/ssml-builder/-/ssml-builder-0.4.3.tgz#40c5f71a541588ecdc1ae9987c48eb12122cc63d"
 

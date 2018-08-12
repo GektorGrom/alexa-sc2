@@ -44,6 +44,6 @@
     "aws-sdk": "^2.286.2",
     "date-fns": "^2.0.0-alpha.16",
     "raven": "^2.6.3",
-    "ssml-builder": "^0.4.2"
+    "ssml-builder": "^0.4.3"
   }
 }

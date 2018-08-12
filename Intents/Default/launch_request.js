@@ -4,7 +4,6 @@ const LaunchRequestHandler = {
   },
   handle(handlerInput) {
     const speechText = 'Welcome to the Alexa Starcraft 2 skill, you can say get marine description!';
-
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(speechText)
