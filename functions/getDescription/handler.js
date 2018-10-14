@@ -1,5 +1,6 @@
 import * as Alexa from 'ask-sdk';
 import UnitCargoIntentHandler from '../../Intents/cargo_intent';
+import CounterVsIntentHandler from '../../Intents/counter_vs_intent';
 import HelpIntentHandler from '../../Intents/Default/helper_intent';
 import ErrorHandler from '../../Intents/Default/error_intent';
 import LaunchRequestHandler from '../../Intents/Default/launch_request';
@@ -22,6 +23,7 @@ exports.description = Alexa.SkillBuilders.custom()
     UnitSpeedIntentHandler,
     GeneralUseIntentHandler,
     VsUseIntentHandler,
+    CounterVsIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler,
