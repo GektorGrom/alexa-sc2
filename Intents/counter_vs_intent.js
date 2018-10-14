@@ -29,7 +29,7 @@ const ConterVsIntentHandler = {
       || Race.resolutions.resolutionsPerAuthority[0].status.code
         === 'ER_SUCCESS_NO_MATCH'
     ) {
-      return specifyRace(handlerInput);
+      return specifyRace(handlerInput, true);
     }
     const unit = Unit.resolutions.resolutionsPerAuthority[0].values?.[0].value.id;
     const race = capitalizeFirstLetter(

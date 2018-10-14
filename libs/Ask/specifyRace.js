@@ -1,6 +1,6 @@
-const specifyRace = handlerInput => handlerInput.responseBuilder
-  .speak('Could you specify opponent race?')
-  .reprompt('Could you specify opponent race?')
+const specifyRace = (handlerInput, isUserRace = false) => handlerInput.responseBuilder
+  .speak(`Could you specify ${isUserRace ? 'your' : 'opponent'} race?`)
+  .reprompt(`Could you specify ${isUserRace ? 'your' : 'opponent'} race?`)
   .addConfirmSlotDirective(
     'Race',
     handlerInput.requestEnvelope.request.intent,
