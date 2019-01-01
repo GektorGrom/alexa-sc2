@@ -5,6 +5,7 @@ import HelpIntentHandler from '../../Intents/Default/helper_intent';
 import ErrorHandler from '../../Intents/Default/error_intent';
 import LaunchRequestHandler from '../../Intents/Default/launch_request';
 import SessionEndedRequestHandler from '../../Intents/Default/sessionEnd_intetnt';
+import EventSearchIntentHandler from '../../Intents/event_search_intents';
 import GeneralUseIntentHandler from '../../Intents/general_use_intent';
 import UnitSpeedIntentHandler from '../../Intents/speed_intent';
 import CancelAndStopIntentHandler from '../../Intents/Default/stop_intent';
@@ -25,6 +26,7 @@ exports.description = Alexa.SkillBuilders.custom()
     VsUseIntentHandler,
     CounterVsIntentHandler,
     HelpIntentHandler,
+    EventSearchIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler,
   )

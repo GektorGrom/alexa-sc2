@@ -5,8 +5,8 @@ const ErrorHandler = {
     return true;
   },
   handle(handlerInput, error) {
-    // Logger.error(error);
-    console.log(error.message);
+    Logger.error(error);
+    // console.log(error.message);
 
     return handlerInput.responseBuilder
       .speak('Sorry, Starcraft 2 skill can\'t understand the command. Please say again.')

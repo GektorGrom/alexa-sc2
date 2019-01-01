@@ -867,13 +867,17 @@ arrify@^1.0.0, arrify@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
 
-ask-sdk-core@^2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/ask-sdk-core/-/ask-sdk-core-2.0.7.tgz#0f2300aa99a5bd92c0bd700d1ed92ff8da1f83b9"
+ask-sdk-core@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/ask-sdk-core/-/ask-sdk-core-2.3.0.tgz#0d9295930776a9c45d9d5c4f9247c648bfe7fd39"
+  integrity sha512-aSc/xaY0lHZu8pmkYPR1ms72WPH73aggo7uL/k0dut6AhP3CmdU3Y9ui7IOAvRJnha0cToQ8TYU0jLEOH6MMNw==
+  dependencies:
+    ask-sdk-runtime "^2.2.0"
 
-ask-sdk-dynamodb-persistence-adapter@^2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/ask-sdk-dynamodb-persistence-adapter/-/ask-sdk-dynamodb-persistence-adapter-2.0.7.tgz#c00c88579cd32cf91b1b3d843615ff29cadc5234"
+ask-sdk-dynamodb-persistence-adapter@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/ask-sdk-dynamodb-persistence-adapter/-/ask-sdk-dynamodb-persistence-adapter-2.3.0.tgz#6e9c1b15f063a8db8f617fadc0931f198b92820f"
+  integrity sha512-NeXeXH2YsgsthaijQPej/Peago7oNPxXChPtC6whdPFMvBKQNGWJWI8hPN8o8DWQg4kXSDDPJsjLaUSpBjFFmg==
   dependencies:
     aws-sdk "^2.163.0"
 
@@ -881,12 +885,18 @@ ask-sdk-model@^1.0.0:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/ask-sdk-model/-/ask-sdk-model-1.4.1.tgz#cbc3e071ac720336ee289dd0a57e6bbdf5c9d0f9"
 
-ask-sdk@^2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/ask-sdk/-/ask-sdk-2.0.7.tgz#1157fb90399b50bb1deab55a866255fba4317d72"
+ask-sdk-runtime@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/ask-sdk-runtime/-/ask-sdk-runtime-2.2.0.tgz#00b0dbbce9a362303045f36a4fd92024d6e8e07e"
+  integrity sha512-pYqTizpk+13l7sU/bdyIZKRptyR7fP05T8OdY0/tpD8WQaCyIvPigIEHjYcXN0Yz23FkKECbIRvfXN9OQ7Ka5w==
+
+ask-sdk@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/ask-sdk/-/ask-sdk-2.3.0.tgz#e5d6724992442a9799559cb6d858b6936093dcdd"
+  integrity sha512-yJqGeYSRscp4II9v5j/FK5D5t/ywXwvnBKDepstZZ0tlzByYHBxMH55LpL/F5mcfnYmnqzrIS4nrGiX87Xnpfw==
   dependencies:
-    ask-sdk-core "^2.0.7"
-    ask-sdk-dynamodb-persistence-adapter "^2.0.7"
+    ask-sdk-core "^2.3.0"
+    ask-sdk-dynamodb-persistence-adapter "^2.3.0"
     ask-sdk-model "^1.0.0"
 
 asn1.js@^4.0.0:
@@ -949,7 +959,7 @@ atob@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.1.tgz#ae2d5a729477f289d60dd7f96a6314a22dd6c22a"
 
-aws-sdk@^2.163.0, aws-sdk@^2.286.2:
+aws-sdk@^2.163.0:
   version "2.286.2"
   resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.286.2.tgz#0f35a1b3158049c015161ed83872a38305a7908a"
   dependencies:
@@ -966,6 +976,21 @@ aws-sdk@^2.163.0, aws-sdk@^2.286.2:
 aws-sdk@^2.228.0:
   version "2.275.1"
   resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.275.1.tgz#a5dce9695a705d66a3fa822f4c23d810be90569a"
+  dependencies:
+    buffer "4.9.1"
+    events "1.1.1"
+    ieee754 "1.1.8"
+    jmespath "0.15.0"
+    querystring "0.2.0"
+    sax "1.2.1"
+    url "0.10.3"
+    uuid "3.1.0"
+    xml2js "0.4.19"
+
+aws-sdk@^2.382.0:
+  version "2.382.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.382.0.tgz#9212bc7aced9c051973578d06ea1978a57ccbd5f"
+  integrity sha512-wGjZLYo2ZxGTlj2cHy/0zOfYJKUVBQYG1vpW4Cnbgo3HTtOu906a6tqkiD8QuN0EyEkn7i+wyjSiUFOCh3T/2g==
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -1940,9 +1965,15 @@ data-urls@^1.0.0:
     whatwg-mimetype "^2.0.0"
     whatwg-url "^6.4.0"
 
-date-fns@^2.0.0-alpha.16:
-  version "2.0.0-alpha.16"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.0.0-alpha.16.tgz#d249a6c9b799252652fb9e3f25460eaf9de86ac7"
+date-fns-tz@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/date-fns-tz/-/date-fns-tz-0.1.2.tgz#6cdc21e235f7381d9b9e88d2599251492ba2b3b0"
+  integrity sha512-yLFfN5riwreYzviNZh5ypSNQtJsaRtEoaSKfUBYkhBoBerR5KS3XySQ3RIAgkOs4bREj/AU0ZlbJJ1ulow/djQ==
+
+date-fns@^2.0.0-alpha.26:
+  version "2.0.0-alpha.26"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.0.0-alpha.26.tgz#e46afd73a2b50e0359446309ee7cb631d7467227"
+  integrity sha512-UAptCZ53MVimUFR8MXTyHED51AVGIqFlBfWgiS/KIoSYiJGrWScx4PYQVNSWfK2Js+43OlokCW1ttnexBTJ5Bg==
 
 date-now@^0.1.4:
   version "0.1.4"
@@ -5299,15 +5330,16 @@ raven@^1.2.1:
     stack-trace "0.0.9"
     uuid "3.0.0"
 
-raven@^2.6.3:
-  version "2.6.3"
-  resolved "https://registry.yarnpkg.com/raven/-/raven-2.6.3.tgz#207475a12809277ef54eaceafe2597ff65262ab4"
+raven@^2.6.4:
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/raven/-/raven-2.6.4.tgz#458d4a380c8fbb59e0150c655625aaf60c167ea3"
+  integrity sha512-6PQdfC4+DQSFncowthLf+B6Hr0JpPsFBgTVYTAOq7tCmx/kR4SXbeawtPch20+3QfUcQDoJBLjWW1ybvZ4kXTw==
   dependencies:
     cookie "0.3.1"
     md5 "^2.2.1"
     stack-trace "0.0.10"
     timed-out "4.0.1"
-    uuid "3.0.0"
+    uuid "3.3.2"
 
 raw-body@2.3.2:
   version "2.3.2"
@@ -6611,13 +6643,13 @@ uuid@3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
 
+uuid@3.3.2, uuid@^3.1.0:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
+
 uuid@^2.0.2:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-2.0.3.tgz#67e2e863797215530dff318e5bf9dcebfd47b21a"
-
-uuid@^3.1.0:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
 
 validate-npm-package-license@^3.0.1:
   version "3.0.3"

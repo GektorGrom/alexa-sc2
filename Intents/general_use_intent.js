@@ -1,3 +1,4 @@
+import Speech from 'ssml-builder';
 import specifyUnit from '../libs/Ask/specifyUnit';
 import getDynamoItem from '../libs/AWS/getDynamoItem';
 
@@ -23,12 +24,36 @@ const GeneralUseIntentHandler = {
       return specifyUnit(handlerInput);
     }
     const unit = resolutions.resolutionsPerAuthority[0].values?.[0].value.id;
+    let responseSpeech = '';
     const { competitiveUsage } = await getDynamoItem(
       'SC2_Units',
       unit,
       'competitiveUsage',
     );
-    return handlerInput.responseBuilder.speak(competitiveUsage).getResponse();
+    if (!competitiveUsage || !competitiveUsage.trim()) {
+      const { blizzardGeneralUse } = await getDynamoItem(
+        'SC2_Units',
+        unit,
+        'blizzardGeneralUse',
+      );
+      const speech = new Speech();
+      speech
+        .say(
+          `Here is useful strategies for ${
+            handlerInput.requestEnvelope.request.intent.slots.Unit.value
+          }`,
+        )
+        .pause('500ms');
+      if (blizzardGeneralUse) {
+        blizzardGeneralUse.values.forEach((el) => {
+          speech.say(el).pause('500ms');
+        });
+      }
+      responseSpeech = speech.ssml(true);
+    } else {
+      responseSpeech = competitiveUsage;
+    }
+    return handlerInput.responseBuilder.speak(responseSpeech).getResponse();
   },
 };
 

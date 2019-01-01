@@ -40,10 +40,11 @@
     "webpack": "^3.10.0"
   },
   "dependencies": {
-    "ask-sdk": "^2.0.7",
-    "aws-sdk": "^2.286.2",
-    "date-fns": "^2.0.0-alpha.16",
-    "raven": "^2.6.3",
+    "ask-sdk": "^2.3.0",
+    "aws-sdk": "^2.382.0",
+    "date-fns": "^2.0.0-alpha.26",
+    "date-fns-tz": "^0.1.2",
+    "raven": "^2.6.4",
     "ssml-builder": "^0.4.3"
   }
 }
