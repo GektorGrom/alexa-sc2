@@ -43,7 +43,7 @@ const EventSearchIntentHandler = {
     const speech = new Speech();
     if (events.length > 0) {
       speech.say('You can watch').pauseByStrength('strong');
-      events.sort((a, b) => a.time - b.time).forEach(({ title, stage, time }) => {
+      events.forEach(({ title, stage, time }) => {
         speech
           .emphasis('moderate', title)
           .pause('150ms')

@@ -9,21 +9,23 @@ AWS.config.update({
 });
 const client = new AWS.DynamoDB();
 
-const getEventsByRange = async (start, end) => {
+const getEventsByRange = async (start, end, ProjectionExpression = '#eventTime, stage, title') => {
+  const now = new Date().getTime();
+  const startFromNow = start < now ? now : start;
   const results = await client
     .scan({
       TableName: 'sc2_events',
-      ProjectionExpression: '#eventTime, stage, title',
+      ProjectionExpression,
       FilterExpression: '#eventTime between :start_day and :end_date',
       ExpressionAttributeNames: {
         '#eventTime': 'time',
       },
       ExpressionAttributeValues: {
-        ':start_day': { N: `${start}` },
+        ':start_day': { N: `${startFromNow}` },
         ':end_date': { N: `${end}` },
       },
     }).promise();
-  return results.Items.map(parse);
+  return results.Items.map(parse).sort((a, b) => a.time - b.time);
 };
 
 export default getEventsByRange;

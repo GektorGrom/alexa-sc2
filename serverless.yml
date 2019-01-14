@@ -15,4 +15,10 @@ functions:
     handler: functions/getDescription/handler.description
     events:
       - alexaSkill
+  flashBriefing:
+    handler: functions/flashBriefing/handler.flashBriefing
+    events:
+      - http:
+          method: get
+          path: flashBriefing
 
